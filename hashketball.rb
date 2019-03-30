@@ -1,5 +1,4 @@
-
-
+require 'pry'
 
 def game_hash
   {:home => {
@@ -31,13 +30,11 @@ end
  def num_points_scored(name)
   game_hash.each do |home_away, keys|
     keys[:players].each do |player|
+      binding.pry
       return player[:points] if player[:player_name] == name  
       end
   end
 end
-
-
-
 
  def shoe_size(name)
   game_hash.each do |home_away, keys|
